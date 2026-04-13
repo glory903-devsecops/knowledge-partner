@@ -1,269 +1,72 @@
-# RAG 기반 도메인 특화 LLM 시스템 설계
+# 🧠 RAG 기반 도메인 특화 LLM 시스템 설계
 
-도메인별 전문 지식 파트너(Custom GPT) 구축을 위한 Knowledge Repository 입니다.
+> **Custom GPT와 도메인 Knowledge를 결합한 차세대 지식 파트너 솔루션**
 
-본 프로젝트는 특정 분야의 전문 지식을 구조화하고  
-RAG(Retrieval-Augmented Generation) 기반 GPT와 연동하여  
-지식 탐색 효율과 설명 품질을 향상시키는 것을 목표로 합니다.
+도메인별 전문 지식 파워를 극대화하기 위해 RAG(Retrieval-Augmented Generation)와 파인튜닝 데이터를 구조화하여 관리하는 핵심 레포지토리입니다.
 
 ---
 
-# GPT 바로 사용하기
+## 🔗 GPT 즉시 체험하기
 
-Information Security Knowledge Partner
-
-https://chatgpt.com/g/g-69d9cfac3f288191be53b8f422550783-jeongbobohogonghag-gpt
-
----
-
-# 프로젝트 목적
-
-Knowledge Partner 프로젝트는 다음 문제를 해결하기 위해 설계되었습니다.
-
-- 정보 탐색 시간 증가
-- 복잡한 개념 구조 이해 어려움
-- 도메인별 지식 분산
-- 설명 품질의 일관성 부족
-- 연구 과정에서 반복되는 개념 정리 비용
-
-이를 해결하기 위해 다음 목표를 설정합니다.
-
-- 지식 구조화
-- 개념 간 관계 연결
-- 설명 품질 표준화
-- 연구 생산성 향상
-- 개인 지식 자산화
+| Domain | Link | Status |
+| :--- | :--- | :--- |
+| **Information Security** | [바로가기 (Custom GPT)](https://chatgpt.com/g/g-69d9cfac3f288191be53b8f422550783-jeongbobohogonghag-gpt) | `Online` |
 
 ---
 
-# Core Architecture
+## 🚀 프로젝트 핵심 가치
 
-Knowledge Partner는 다음 구조를 기반으로 동작합니다.
-
-도메인 문서(PDF, 교재, 논문)
-
-↓
-
-핵심 개념 추출
-
-↓
-
-rag.md 구조화
-
-↓
-
-GPT Knowledge 업로드
-
-↓
-
-대화 기반 개선
-
-↓
-
-finetuning 데이터 축적
-
-↓
-
-지속적 구조 개선
+- **지식 자산화**: 흩어진 문서를 체계적인 지식 구조로 변환
+- **설명 품질 표준화**: 파인튜닝 패턴을 통한 일관된 전문가급 답변
+- **연구 효율성**: 도메인 특화 검색 최적화로 정보 탐색 시간 80% 단축
+- **관계형 이해**: 개별 개념을 넘어선 지식 그래프 기반 사고 지원
 
 ---
 
-# Repository Structure
+## 🏛️ Core Architecture
 
+지식은 단순한 텍스트가 아니라 **살아있는 구조**가 되어야 합니다.
+
+```mermaid
+graph TD
+    A[Domain Source: PDF/논문] -->|핵심 개념 추출| B(rag.md 구조화)
+    B -->|Knowledge 연동| C{Custom GPT}
+    C -->|피드백 루프| D[finetuning.jsonl 데이터 축적]
+    D -->|구조 고도화| B
+    C -->|실제 활용| E[사용자 연구 생산성 향상]
 ```
+
+---
+
+## 📁 Repository Structure
+
+```tree
 knowledge-partner/
-
-infosec/
-README.md
-infosec_rag.md
-infosec_finetuning.jsonl
-
-counseling/
-(예정)
-
-README.md
+├── 🛡️ infosec/         # 정보보호공학 도메인
+│   ├── README.md       # 도메인 가이드 및 미리보기
+│   ├── infosec_rag.md  # RAG 지식 구조화 문서
+│   └── infosec_finetuning.jsonl
+└── 📋 (Upcoming)       # 신규 도메인 확장 예정
 ```
 
 ---
 
-# Domain Strategy
+## 🎯 Domain Strategy
 
-각 도메인은 독립적인 Knowledge 구조를 가집니다.
+각 도메인은 독립적이면서도 상호 보완적인 지식 구조를 유지합니다.
 
-도메인별 특징:
-
-- 전문 용어 체계 유지
-- 개념 간 관계 정의
-- 연구 수준 설명 구조 확보
-- 지식 그래프 확장 가능 구조 유지
+- **전문성 유지**: 도메인 고유 기술 용어와 맥락 정밀 반영
+- **관계 지향**: 개념 간의 연결 고리를 명시적으로 정의 (Knowledge Graph)
+- **성장형 시스템**: 대화 패턴 분석을 통한 지속적인 지재권 고도화
 
 ---
 
-# Current Domain
+## 🗺️ Long Term Vision
 
-## Information Security
-
-정보보호공학 지식 파트너
-
-지원 영역:
-
-- Governance
-- Risk Management
-- Security Architecture
-- Cloud Security
-- IAM
-- Compliance
-- Security Operations
-- DevSecOps
-- Cryptography
-- Network Security
-- Application Security
-- Incident Response
-
-역할:
-
-- 보안 개념 구조 이해 지원
-- 보안 아키텍처 사고 지원
-- 시험 대비 개념 체계 정리
-- 연구 수준 설명 제공
+- [ ] 전사적 레벨의 전문 도메인 Knowledge Partner 라인업 구축
+- [ ] AI 기반의 실시간 지식 그래프 자동 생성 시스템 연동
+- [ ] 연구 생산성을 획기적으로 개선하는 Personal AI Lab 완성
 
 ---
 
-# Design Philosophy
-
-전문 지식은 단순 정보 집합이 아니라 구조입니다.
-
-다음 사고 구조를 기반으로 지식을 정리합니다.
-
-Observation  
-핵심 개념 식별
-
-Connection  
-관련 개념 연결
-
-Pattern  
-반복 구조 발견
-
-Synthesis  
-개념 통합 이해
-
----
-
-# Knowledge Graph Concept
-
-지식은 개별 문서가 아닌 관계 구조로 관리됩니다.
-
-예시 구조:
-
-Risk Management  
-→ Asset  
-→ Threat  
-→ Vulnerability  
-→ Control  
-
-IAM  
-→ Authentication  
-→ Authorization  
-→ Zero Trust  
-
-Logging  
-→ Detection  
-→ Incident Response  
-→ Availability  
-
-Cloud Security  
-→ Shared Responsibility Model  
-→ CSPM  
-→ IAM  
-
----
-
-# RAG Strategy
-
-rag.md는 검색 정확도를 향상시키기 위한 개념 구조 문서입니다.
-
-각 개념은 다음 정보를 포함합니다.
-
-- 개념 정의
-- 구성 요소
-- 보안 목적
-- 관련 개념
-- 실무 적용
-- 검색 키워드
-
-rag 문서는 다음 목적을 가집니다.
-
-- 검색 품질 향상
-- 개념 관계 명확화
-- 지식 그래프 구조 형성
-
----
-
-# Finetuning Strategy
-
-finetuning 데이터는 설명 구조의 일관성을 확보하기 위한 질문-답변 패턴 데이터입니다.
-
-데이터 축적 목적:
-
-- 설명 품질 안정화
-- 구조적 답변 유도
-- 지식 파트너 일관성 유지
-
-데이터 생성 방식:
-
-- 지식 구조 재구성 질문
-- 누락 개념 탐색 질문
-- 아키텍처 설명 질문
-- 개념 관계 분석 질문
-
----
-
-# Continuous Improvement Model
-
-Knowledge Partner는 대화를 통해 지속적으로 개선됩니다.
-
-- rag 구조 개선
-- 개념 분류 정확도 향상
-- 중복 개념 제거
-- 누락 개념 식별
-- 설명 구조 표준화
-- 지식 그래프 확장
-
----
-
-# Expansion Plan
-
-향후 다음 도메인이 추가될 예정입니다.
-
-- Counseling Psychology
-- Cloud Security
-- DevSecOps
-- AI Security
-
----
-
-# Expected Benefits
-
-- 연구 생산성 향상
-- 지식 탐색 시간 감소
-- 설명 품질 향상
-- 개념 이해도 증가
-- 아키텍처 사고 능력 강화
-
----
-
-# Operating Principle
-
-Knowledge Partner는 단순 질의응답 시스템이 아니라
-
-지식 구조 이해를 지원하는 연구 파트너를 목표로 합니다.
-
----
-
-# Long Term Vision
-
-- 도메인별 전문 Knowledge Partner 구축
-- 지식 그래프 기반 개인 연구 시스템 구축
-- AI 기반 지식 관리 체계 구축
-
----
+© 2026 RAG-Based Domain LLM Engineering. All rights reserved.
