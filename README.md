@@ -1,4 +1,4 @@
-# 🧠 RAG 기반 도메인 특화 LLM 시스템 설계
+# RAG 기반 도메인 특화 LLM 시스템 설계
 
 > **Custom GPT와 도메인 Knowledge를 결합한 차세대 지식 파트너 솔루션**
 
